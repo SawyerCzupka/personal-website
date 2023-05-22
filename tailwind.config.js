@@ -4,8 +4,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Open Sans', 'sans-serif']
-      }
+        open: ['Open Sans', 'sans'],
+        wix: ['Wix Madefor Display', 'sans']
+      },
     },
   },
   plugins: [],

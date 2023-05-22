@@ -1,23 +1,55 @@
-<template>
-  <section class="bg-stone-200 h-screen w-screen">
-    <p class="pt-36 text-9xl text-center font-extrabold font-sans">
-      Hey, im <span class="text-red-600">Sawyer</span>
-    </p>
-    <div class="pt-12 text-lg flex w-2/4 m-auto">
-      <p class="text-center">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id pariatur
-        necessitatibus, itaque quod officiis tenetur aut recusandae aliquam sed
-        nemo eos facilis veniam labore accusantium ullam. Ipsa quia nobis
-        necessitatibus.
-      </p>
-    </div>
-
-    <div class="pt-48 flex  text-xl font-bold">
-    <p>Linkedin</p>
-    <p>Resume</p>
-    <p>GitHub</p>
-    </div>
-  </section>
+<template class="nuxt-scrollbars">
+  <!-- https://mckvr.com/ -->
+  <main class="bg-neutral-800">
+    <section class="pattern h-screen w-screen flex justify-center items-start">
+      <!-- Card -->
+      <div
+        class="flex flex-col justify-center items card border-gray-400 border-2 mt-40"
+      >
+        <Profile class="outline-red-400" />
+        <Contact class="pt-10" />
+      </div>
+    </section>
+  </main>
 </template>
 
-<script setup></script>
+<style>
+  .background {
+    background-color: rgba(29, 30, 33);
+  }
+
+  ::-webkit-scrollbar {
+    background-color: transparent;
+    height: 0.2em;
+    width: 0.5em;
+  }
+
+  ::-webkit-scrollbar-track {
+    --tw-bg-opacity: 1;
+    background-color: #27272a;
+    background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    --tw-bg-opacity: 1;
+    background-color: #3f3f46;
+    background-color: rgb(63 63 70 / var(--tw-bg-opacity));
+    border-radius: 0.6em;
+  }
+
+  .pattern {
+    background: transparent;
+    background-image: radial-gradient(
+      theme("colors.rose.500") 1px,
+      transparent 1px
+    );
+    background-size: 50px 50px;
+  }
+
+  .card {
+    width: 800px;
+    padding: 2.5rem;
+    background-color: rgba(29, 30, 33);
+    border-radius: 30px;
+  }
+</style>
